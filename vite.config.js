@@ -10,7 +10,8 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false,
-    // Tambahkan ini untuk optimisasi
+    // Optimasi untuk production
+    minify: 'terser',
     rollupOptions: {
       output: {
         manualChunks: {
@@ -20,6 +21,5 @@ export default defineConfig({
       }
     }
   },
-  // Penting untuk SPA!
-  base: './',
+  base: './'
 })
